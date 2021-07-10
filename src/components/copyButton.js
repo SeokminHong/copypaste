@@ -4,7 +4,9 @@ import copy from "copy-to-clipboard"
 import "./copyButton.css"
 
 const LINK =
-  process.env.NODE_ENV === "development" ? "http://localhost:8000" : ""
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:8000"
+    : "https://copy-paste.netlify.app"
 
 const CopyButton = ({ defaultText }) => {
   const [text, setText] = useState(defaultText)
