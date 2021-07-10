@@ -3,10 +3,7 @@ import copy from "copy-to-clipboard"
 
 import "./copyButton.css"
 
-const LINK =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:8000"
-    : "https://copy-paste.netlify.app"
+const LINK = "https://copy-paste.netlify.app"
 
 const CopyButton = ({ defaultText }) => {
   const [text, setText] = useState(defaultText)
@@ -32,7 +29,7 @@ const CopyButton = ({ defaultText }) => {
         aria-label="Share"
         className="share-button"
         onClick={() => {
-          copy(`${LINK}?q=${text}`)
+          copy(encodeURI(`${LINK}?q=${text}`))
           alert(`Share link copied!`)
         }}
       >
