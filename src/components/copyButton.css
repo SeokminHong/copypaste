@@ -1,0 +1,13 @@
+.input-area {
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.input-area input {
+  flex: 1;
+}
+
+.input-area button {
+  margin-left: 8px;
+}
